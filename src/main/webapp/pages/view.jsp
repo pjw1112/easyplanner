@@ -12,6 +12,7 @@
 <link href="https://hangeul.pstatic.net/hangeul_static/css/maru-buri.css" rel="stylesheet">
 <link rel="stylesheet" href="css/basic.css">
 <link rel="stylesheet" href="css/media_query.css">
+<script src="script/session.js" defer></script>
 <script src="script/join_form_script.js" defer></script>
 <script src="script/script.js" defer></script>
 <title>My Calendar</title>
@@ -24,9 +25,22 @@
             </div>
             <div class="menu">
                 <ul>
-                    <li><a href="#" class="login_click">로그인</a></li>
-                    <li><a href="#" class="join_click">회원가입</a></li>
-
+                <c:choose>
+				    <c:when test="${empty sessionScope.login_id}">
+				        <!-- 로그인이 되어있지 않은 경우 -->
+				        <li><a class="login_click" style="cursor:pointer">로그인</a></li>
+				        <li><a class="join_click" style="cursor:pointer">회원가입</a></li>
+				        <li><a href="users_logout.do" class="log_out" style="display:none">로그아웃</a></li>
+				        <li><a href="users_info.do" class="my_info" style="display:none">내정보 보기</a></li>
+				    </c:when>
+				    <c:otherwise>
+				        <!-- 로그인이 되어있는 경우 -->
+				        <li><a class="login_click" style="display:none">로그인</a></li>
+				        <li><a class="join_click" style="display:none">회원가입</a></li>
+				        <li><a href="users_logout.do" class="log_out">로그아웃</a></li>
+				        <li><a href="users_info.do" class="my_info">내정보 보기</a></li>
+				    </c:otherwise>
+				</c:choose>
                 </ul>
             </div>
         </div>
@@ -130,8 +144,8 @@
     <!-- default display none -->
     <div class="login_box">
         <div class="login_box_inner">
-            <form action="users_read.do" method="post">
-
+            <form action="users_login.do" method="post">
+ 				<fieldset>
 
                 <div class="form-group">
                     <label for="id_login">아이디 </label> <input type="text" id="id_login" name="id_login"
@@ -139,7 +153,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="pass_login">비밀번호 </label> <input type="text" id="pass_login" name="pass_login"
+                    <label for="pass_login">비밀번호 </label> <input type="password" id="pass_login" name="pass_login"
                         class="form-control" />
                 </div>
 
@@ -166,7 +180,7 @@
     <!-- default display none -->
     <div class="join_box">
         <div class="join_box_inner">
-            <form action="users_create.do" method="post">
+            <form action="users_join.do" id="users_create_form" method="post">
                 <fieldset>
                     <div class="form-group-first">
                         <div class="logo_join">
@@ -236,8 +250,8 @@
             <form action="#" method="post">
                 <fieldset>
                     <div class="form-group">
-                        <label for="email_f">이메일 </label> <input type="email" id="email_f" name="email_f"
-                            class="form-control" />
+                        <label for="email_f">이메일 </label> 
+                        <input type="email" id="email_f" name="email_f" class="form-control" />
                     </div>
                     <div class="form-group">
                         <input type="submit" value="인증메일 보내기" class="btn btn-info btn-block ">

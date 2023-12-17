@@ -23,7 +23,8 @@
 
     <body>
         <div class="wrapper">
-            <h1>easy planner 에 가입하신것을 환영합니다!</h1>
+            <h1>로그인에 실패했습니다.</h1>
+             <h1>아이디와 비밀번호를 다시 확인해주세요!</h1>
         </div>
         <script type="text/javascript">
             setTimeout(function () {

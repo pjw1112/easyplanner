@@ -1,3 +1,5 @@
+let users_create_form = document.querySelector("#users_create_form");
+
 let id_form = document.querySelector("#id_join");
 let pass_form = document.querySelector("#pass_join");
 let pass2_form = document.querySelector("#pass2_join");
@@ -9,6 +11,7 @@ let pass_form_label_Check = document.querySelector(".pass_check .check_message")
 let pass2_form_label_Check = document.querySelector(".pass2_check .check_message");
 let email_form_label_Check = document.querySelector(".email_check .check_message");
 let birth_form_label_Check = document.querySelector(".birth_check .check_message");
+
 
 let login_click = document.querySelector(".login_click");
 let login_box = document.querySelector(".login_box");
@@ -23,11 +26,12 @@ let background_black = document.querySelector(".black");
 let all_cancels = document.querySelectorAll(".cancel");
 
 
+
 let id_ok = false;
 let pass_ok = false;
 let pass2_ok = false;
 let email_ok = false;
-
+let birth_ok = false;
 
 
 login_click.addEventListener("click" , () => {
@@ -67,6 +71,11 @@ function cancel (){
     box.value="";
   });
 
+  id_ok = false;
+  pass_ok = false;
+  pass2_ok = false;
+  email_ok = false;
+  birth_ok = false;
 
 };
 
@@ -236,7 +245,7 @@ birth_form.addEventListener("input",() =>{
   p.innerHTML = "생일 입력 완료";
   p.classList.add("success");
   birth_form_label_Check.appendChild(p);
-
+  birth_ok = true;
 });
 
 
@@ -254,4 +263,16 @@ find_id_button.addEventListener("click" , function(){
 //   background_black.style.display="initial"
 // });
 
+console.log(users_create_form);
+users_create_form.addEventListener("submit" , (event) => {
+	
+ if( id_ok == false || pass_ok == false || pass2_ok == false || email_ok == false || birth_ok == false ){
+  event.preventDefault();
+ }
+});
 
+// $("#users_create_form").submit(function(){
+//   if( id_ok == false || pass_ok == false || pass2_ok == false || email_ok == false || birth_ok == false ){
+//     return false;
+//    }
+//   });

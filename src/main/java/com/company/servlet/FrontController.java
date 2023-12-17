@@ -6,9 +6,12 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.company.service.Action;
 import com.company.service.Users_create;
+import com.company.service.Users_delete;
+import com.company.service.Users_read;
 
 
 public class FrontController extends HttpServlet {
@@ -38,29 +41,58 @@ public class FrontController extends HttpServlet {
 		response.setContentType("text/html; charset=UTF-8");
 		PrintWriter out = response.getWriter();
 
+		HttpSession session = request.getSession();
+		
 		String path = request.getServletPath();
-		String url = "/pages/view.jsp", msg = "관리자에게 문의 바랍니다.";
+		String url =  "view.do";
+		String msg = "관리자에게 문의 바랍니다.";
 
-		if (path.equals("/view.do")) { // list
+		if (path.equals("/view.do")) { // index에서 메인(view.jsp) 페이지로
 
-			
+			url= "pages/view.jsp";
 			request.getRequestDispatcher(url).forward(request, response);
-
-		}else if (path.equals("/users_create.do")) { // list
+			
+			System.out.println("세션에 저장된 id 값 : " + session.getAttribute("login_id")); 
+		}else if (path.equals("/users_join.do")) { // 유저 회원가입
 
 			controller = new Users_create();
 			controller.execu(request, response);
+			
+			msg ="회원 가입 성공!";
+			
+		}else if (path.equals("/users_login.do")) { // 유저 로그인
 
-			url = "/pages/join.jsp";
+			controller = new Users_read();
+			controller.execu(request, response);
+			
+			msg = session.getAttribute("login_id")+" 유저로 로그인 되었습니다.";
+
+		}else if (path.equals("/users_logout.do")) { // 유저 로그아웃
+
+			session.invalidate();
+			
+			msg ="로그 아웃";
+
+		}else if (path.equals("/users_info.do")) { // 유저 내 정보 보기 페이지로 이동
+
+			
+			url = "pages/userinfo.jsp";
 			request.getRequestDispatcher(url).forward(request, response);
 
-		}else if (path.equals("/users_read.do")) { // list
+		}else if (path.equals("/users_delete_view.do")) { // 유저 회원 탈퇴 페이지로 이동
 
-	
-
-			url = "/view.do";
+			url = "pages/user_delete.jsp";
 			request.getRequestDispatcher(url).forward(request, response);
 
+		
+		}else if (path.equals("/users_delete.do")) { // 유저 회원 탈퇴 기능
+
+			controller = new Users_delete();
+			controller.execu(request, response);
+			
+			
+			msg ="회원 정보가 삭제되었습니다.";
+		
 		}
 		
 //		 else if (path.equals("/write_view.do")) { // insert
@@ -119,7 +151,7 @@ public class FrontController extends HttpServlet {
 //			url = "list.do";
 //		}
 //
-//		out.print("<script>alert('" + msg + "'); location.href='" + url + "';</script>");
+		out.print("<script>alert('" + msg + "'); location.href='" + url + "';</script>");
 	}
 
 }

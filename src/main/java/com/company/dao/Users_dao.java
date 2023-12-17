@@ -11,7 +11,7 @@ import com.company.dto.Users_dto;
 public class Users_dao {
 
 	public Users_dto user_read(Users_dto dto_input) {
-		Users_dto dto_output = new Users_dto();
+		Users_dto dto_output = null;
 		
 		DBManager db = new DBManager();
 		Connection conn = null;
@@ -27,7 +27,8 @@ public class Users_dao {
 			rset = pstmt.executeQuery();
 
 			while (rset.next()) {
-				
+				System.out.println("rest.next()안쪽 진입");
+				dto_output = new Users_dto();
 				dto_output.setU_index( rset.getInt("u_index"));
 				dto_output.setU_id( rset.getString("u_id"));
 				dto_output.setU_pass( rset.getString("u_pass"));
@@ -81,11 +82,18 @@ public class Users_dao {
 		PreparedStatement pstmt = null;
 		ResultSet rset = null;
 		conn = db.getConnection();
-		
-		String sql = "insert into users (u_id, u_pass, u_email, u_birth, u_join_date, u_grade) values (?,?,?,?,?,?)";
+		String sql1 = "select * from users where u_id=?";
+		String sql2 = "insert into users (u_id, u_pass, u_email, u_birth, u_join_date, u_grade) values (?,?,?,?,?,?)";
 
 		try {
-			pstmt = conn.prepareStatement(sql);
+			
+			pstmt = conn.prepareStatement(sql1);
+			pstmt.setString(1, dto_input.getU_id());
+			rset = pstmt.executeQuery();
+			
+			if(!rset.next()) {
+			
+			pstmt = conn.prepareStatement(sql2);
 			pstmt.setString(1, dto_input.getU_id());
 			pstmt.setString(2, dto_input.getU_pass());
 			pstmt.setString(3, dto_input.getU_email());
@@ -99,7 +107,8 @@ public class Users_dao {
 			}else {
 				System.out.println("Users_dao > user_create > insert 쿼리 문 실패");
 			}
-
+			
+			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {

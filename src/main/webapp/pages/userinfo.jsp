@@ -1,5 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-    <!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+  <!DOCTYPE html>
     <html>
 
     <head>
@@ -23,13 +24,11 @@
 
     <body>
         <div class="wrapper">
-            <h1>easy planner 에 가입하신것을 환영합니다!</h1>
+            <h1>유저 정보 페이지 입니다</h1>
+            
+            <a href="users_delete_view.do">회원 탈퇴</a>
         </div>
-        <script type="text/javascript">
-            setTimeout(function () {
-                location.href = '${pageContext.request.contextPath}/index.jsp';
-            }, 2000);
-        </script>
+      
     </body>
 
     </html>
