@@ -31,6 +31,8 @@ public class Users_read implements Action {
 		if (dto != null) {
 			System.out.println("dao.user_read(dto) 성공");
 			session.setAttribute("login_id", dto.getU_id());
+			session.setAttribute("login_U_index", dto.getU_index());
+			
 		} else {
 			System.out.println("dao.user_read(dto) 실패");
 			out.print("<script>alert('로그인 실패. 아이디와 비밀번호를 확인해주세요.'); location.href='view.do';</script>");

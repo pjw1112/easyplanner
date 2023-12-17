@@ -197,6 +197,37 @@ document.addEventListener("keydown", (e) => {
 
 //메인 view 구현
 function load() {
+	
+	 $.ajax({
+				 url:"Get_loginUserId", //경로
+				 type:"post", //get, post
+				 data:"", 
+				 dataType:"text", // text, json, xml
+				 success: function(data){ 
+					 
+					console.log("세션 로그인 유저 : "+ data);
+				 }, // 성공시 처리
+				 
+				 error: function(xhr, textStatus, errorThrown){  
+					 $(".r3").html(textStatus+"(HTTP-"+xhr.status+")");
+					 
+				 } // 실패시 처리
+				 
+			 });//end $.ajax
+			 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
   //1. 기존에 작성된 view 비우기
   calendar_body.innerHTML = "";
   list_column.innerHTML = "";
@@ -254,8 +285,8 @@ function load() {
       if(view_type != "년별"){
       insert_schedule.style.display="block";
       background_black.style.display="block";
-      document.querySelector("#start_time").value = box.id + "T00:00";
-      document.querySelector("#end_time").value = box.id + "T00:00";
+      document.querySelector("#start_date").value = box.id + "T00:00";
+      document.querySelector("#end_date").value = box.id + "T00:00";
 
 
       let str = box.id.split('-');

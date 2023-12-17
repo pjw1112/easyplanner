@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.company.service.Action;
+import com.company.service.Schedule_create;
 import com.company.service.Users_create;
 import com.company.service.Users_delete;
 import com.company.service.Users_read;
@@ -87,13 +88,27 @@ public class FrontController extends HttpServlet {
 		
 		}else if (path.equals("/users_delete.do")) { // 유저 회원 탈퇴 기능
 
-			controller = new Users_delete();
+			controller = new Schedule_create();
 			controller.execu(request, response);
 			
 			
 			msg ="회원 정보가 삭제되었습니다.";
 		
+		}else if (path.equals("/schedule_create.do")) { // 스케쥴 생성 
+
+			if(request.getSession().getAttribute("login_U_index")!= null) {
+			controller = new Schedule_create();
+			controller.execu(request, response);
+			
+			msg ="스케쥴 생성 성공!";
+			}else {
+			msg ="로그인 해주세요.";	
+			}
 		}
+		
+		
+		
+		
 		
 //		 else if (path.equals("/write_view.do")) { // insert
 //

@@ -19,8 +19,8 @@ public class DBManager {
 			Context envContext = (Context) initContext.lookup("java:/comp/env");
 
 			// 3. DataSource - jdbc/mbasic
-//			DataSource db = (DataSource) envContext.lookup("jdbc/easy_planner");
-			DataSource db = (DataSource) envContext.lookup("jdbc/jwpdev");
+			DataSource db = (DataSource) envContext.lookup("jdbc/easy_planner");
+//			DataSource db = (DataSource) envContext.lookup("jdbc/jwpdev");
 			// 4. Connection
 			conn = db.getConnection();
 			

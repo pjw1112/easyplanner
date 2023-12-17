@@ -32,6 +32,7 @@
 				        <li><a class="join_click" style="cursor:pointer">회원가입</a></li>
 				        <li><a href="users_logout.do" class="log_out" style="display:none">로그아웃</a></li>
 				        <li><a href="users_info.do" class="my_info" style="display:none">내정보 보기</a></li>
+				    	
 				    </c:when>
 				    <c:otherwise>
 				        <!-- 로그인이 되어있는 경우 -->
@@ -39,6 +40,7 @@
 				        <li><a class="join_click" style="display:none">회원가입</a></li>
 				        <li><a href="users_logout.do" class="log_out">로그아웃</a></li>
 				        <li><a href="users_info.do" class="my_info">내정보 보기</a></li>
+				     
 				    </c:otherwise>
 				</c:choose>
                 </ul>
@@ -283,7 +285,7 @@
         <div class="subject">일정 추가</div>
         <div class="description">일정 내용과 시작 ~ 종료 시간을 설정해주세요</div>
         <div class="content">
-            <form action="#" method="post">
+            <form action="schedule_create.do" method="post">
                 <fieldset>
                     <div class="form-group">
                         <label for="content">일정</label>
@@ -291,12 +293,12 @@
                             class="form-control insert_schedule_write_form"></textarea>
                     </div>
                     <div class="form-group">
-                        <label for="content">시작 시간</label> <input type="datetime-local" id="start_time"
-                            name="start_time" class="form-control" />
+                        <label for="start_date">시작 시간</label> 
+                        <input type="datetime-local" id="start_date" name="start_date" class="form-control" />
                     </div>
                     <div class="form-group">
-                        <label for="content">종료 시간</label> <input type="datetime-local" id="end_time"
-                            name="end_time" class="form-control" />
+                        <label for="end_date">종료 시간</label> 
+                        <input type="datetime-local" id="end_date" name="end_date" class="form-control" />
                     </div>
                     <div class="form-group insert_schedule_end">
                         <input type="submit" value="저장" class="btn btn-info"> <input type="reset" value="취소"
@@ -311,6 +313,8 @@
 
 
     <div class="black"></div>
+
+
 </body>
 
 </html>

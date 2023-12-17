@@ -263,16 +263,9 @@ find_id_button.addEventListener("click" , function(){
 //   background_black.style.display="initial"
 // });
 
-console.log(users_create_form);
 users_create_form.addEventListener("submit" , (event) => {
 	
  if( id_ok == false || pass_ok == false || pass2_ok == false || email_ok == false || birth_ok == false ){
   event.preventDefault();
  }
 });
-
-// $("#users_create_form").submit(function(){
-//   if( id_ok == false || pass_ok == false || pass2_ok == false || email_ok == false || birth_ok == false ){
-//     return false;
-//    }
-//   });
