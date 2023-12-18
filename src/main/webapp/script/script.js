@@ -210,10 +210,15 @@ async function Get_UserAllSchedule() {
     
 }
 
+/*
 
 
 
 
+
+
+
+*/
 //메인 view 구현
 async function load() {
 	
@@ -326,7 +331,15 @@ await Get_UserAllSchedule();
 
 
 }
+/*
 
+
+
+
+
+
+
+*/
 //캘린더를 년 형태로 출력해주는 함수
 function view_like_year(year) {
   month_display.innerText = year + "년 ";
@@ -391,7 +404,15 @@ function view_like_year(year) {
     calendar_body.appendChild(month_box);
   }
 }
+/*
 
+
+
+
+
+
+
+*/
 //캘린더를 월 형태로 출력해주는 함수
 function view_like_month(week, month, year, month_str) {
   // console.log(...calendar_body.classList);
@@ -474,6 +495,15 @@ function view_like_month(week, month, year, month_str) {
   month_display.innerText = year + "년 " + month_str;
 }
 
+/*
+
+
+
+
+
+
+
+*/
 //캘린더를 주 형태로 출력해주는 함수
 function view_like_week(day, week, month, year, month_str) {
   calendar_body.classList.remove(...calendar_body.classList);
@@ -499,7 +529,12 @@ function view_like_week(day, week, month, year, month_str) {
     item.classList.add("beforeMonth_daybox");
     item.classList.add("daybox");
     item.id = dateString;
-    item.innerText = daysInBeforeMonth - (week - i - 1);
+        
+    let item2 = document.createElement("div");
+    item2.classList.add("row0");
+    item2.innerText = daysInBeforeMonth - (week - i - 1);
+    item.appendChild(item2);
+        
     calendar_body.appendChild(item);
   }
 
@@ -513,15 +548,21 @@ function view_like_week(day, week, month, year, month_str) {
     item.classList.add("thisMonth_daybox");
     item.classList.add("daybox");
     item.id = dateString;
-    item.innerText = i + 1;
-
+    
+   
+	let item2 = document.createElement("div");
+    item2.classList.add("row0");
+    item2.innerText = i + 1;
+    
     if (dt_temp.getDay() == 0 || dt_temp.getDay() == 6) {
       item.classList.add("holiday");
     }
     if (dateString == today_temp) {
       item.classList.add("month_in_today");
-      item.innerHTML += "<span>&nbsp&nbsp&nbsp&nbsp오늘 ♬</span>";
+      item2.innerHTML += "<span>&nbsp&nbsp&nbsp&nbsp오늘 ♬</span>";
     }
+    
+	item.appendChild(item2);
 
     calendar_body.appendChild(item);
   }
@@ -536,7 +577,12 @@ function view_like_week(day, week, month, year, month_str) {
     item.classList.add("afterMonth_daybox");
     item.classList.add("daybox");
     item.id = dateString;
-    item.innerText = i + 1;
+    
+    let item2 = document.createElement("div");
+    item2.classList.add("row0");
+    item2.innerText =  i + 1;
+    item.appendChild(item2);
+    
     calendar_body.appendChild(item);
   }
 
@@ -568,7 +614,15 @@ function view_like_week(day, week, month, year, month_str) {
   month_display.innerText =
     year + "년 " + month_str + " " + (this_week + 1) + "주차";
 }
+/*
 
+
+
+
+
+
+
+*/
 //캘린더를 일 형태로 출력해주는 함수
 function view_like_day(day, week, month, year, month_str) {
   calendar_body.classList.remove(...calendar_body.classList);
@@ -582,25 +636,37 @@ function view_like_day(day, week, month, year, month_str) {
   item.style.textAlign = "left";
   list_column.appendChild(item);
 
-  let item2 = document.createElement("div");
-  item2.classList.add("thisMonth_daybox");
-  item2.classList.add("daybox");
-  item2.id = dateString;
-  item2.innerText = day;
+  item = document.createElement("div");
+  item.classList.add("thisMonth_daybox");
+  item.classList.add("daybox");
+  item.id = dateString;
+  
 
+	let item2 = document.createElement("div");
+    item2.classList.add("row0");
+    item2.innerText =  day;
+    item.appendChild(item2);
   // if(dt_temp.getDay()==0 || dt_temp.getDay()==6 ){
   //   item2.classList.add("holiday");
   // }
   if (dateString == today_temp) {
-    item2.classList.add("month_in_today");
+    item.classList.add("month_in_today");
     item2.innerHTML += "<span>&nbsp&nbsp&nbsp&nbsp오늘 ♬</span>";
   }
 
-  calendar_body.appendChild(item2);
+  calendar_body.appendChild(item);
 
   month_display.innerText = year + "년 " + month_str + " " + day + "일";
 }
+/*
 
+
+
+
+
+
+
+*/
 //date 객체를 받아서 "yyyy-mm-dd"형식 문자열로 반환해주는 함수
 function formatDate(date) {
   const year = date.getFullYear();
