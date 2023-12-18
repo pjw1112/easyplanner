@@ -17,6 +17,9 @@ let view_type_list = ["일별", "주별", "월별", "년별"];
 let view_type = "월별";
 let week_str = ["일", "월", "화", "수", "목", "금", "토"];
 
+//로그인 한 유저의 모든 스케쥴을 Get_UserAllSchedule() 함수에서 json형식 문자열 배열로 리딩
+let all_schedule; 
+
 load();
 
 // 이벤트 리스너 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -189,17 +192,34 @@ document.addEventListener("keydown", (e) => {
 // 이벤트 리스너 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
-
+// 로그인한 유저의 모든 스케쥴 불러오기
+async function Get_UserAllSchedule() {
+    // 첫 번째 AJAX 요청
+    let login_U_index = await $.ajax({ url: "Get_loginUserIndex" });
+    
+    if(login_U_index != "null"){
+	// 두 번째 AJAX 요청
+   	response = await $.ajax({
+   	     url: "Get_UserAllSchedule",
+        data: { "login_U_index" : login_U_index }
+     });
+	all_schedule=JSON.parse(response);
+   
+    }
+ 	
+    
+}
 
 
 
 
 
 //메인 view 구현
-function load() {
+async function load() {
 	
-	 $.ajax({
-				 url:"Get_loginUserId", //경로
+await Get_UserAllSchedule();
+	/* $.ajax({
+				 url:"Get_loginUserIndex", //경로
 				 type:"post", //get, post
 				 data:"", 
 				 dataType:"text", // text, json, xml
@@ -213,15 +233,18 @@ function load() {
 					 
 				 } // 실패시 처리
 				 
-			 });//end $.ajax
+			 });//end $.ajax*/
 			 
+	if(all_schedule != null){
+	all_schedule.forEach((json) => {
+      
+     console.log(json.start_date.split('T')[0]);
+    });  
+	
+	}
 	
 	
-	
-	
-	
-	
-	
+
 	
 	
 	
@@ -375,12 +398,7 @@ function view_like_month(week, month, year, month_str) {
   calendar_body.classList.remove(...calendar_body.classList);
   calendar_body.classList.add("view_like_month");
 
-  let today_temp = new Date().toLocaleDateString("default", {
-    weekday: "long",
-    year: "numeric",
-    month: "numeric",
-    day: "numeric",
-  });
+  let today_temp = formatDate(new Date());
   //상단 날짜 구분 기준 표현
   for (let i = 0; i < 7; i++) {
     let item = document.createElement("div");
@@ -399,8 +417,12 @@ function view_like_month(week, month, year, month_str) {
     item.classList.add("beforeMonth_daybox");
     item.classList.add("daybox");
     item.id = dateString;
-    item.innerText = daysInBeforeMonth - (week - i - 1);
-
+    
+    let item2 = document.createElement("div");
+    item2.classList.add("row0");
+    item2.innerText = daysInBeforeMonth - (week - i - 1);
+    item.appendChild(item2);
+	
     calendar_body.appendChild(item);
   }
 
@@ -409,20 +431,24 @@ function view_like_month(week, month, year, month_str) {
   for (let i = 0; i < daysInMonth; i++) {
     let dt_temp = new Date(year, month, i + 1);
     let dateString = formatDate(dt_temp);
-
+	
     let item = document.createElement("div");
     item.classList.add("thisMonth_daybox");
     item.classList.add("daybox");
     item.id = dateString;
-    item.innerText = i + 1;
-    if (dt_temp.getDay() == 0 || dt_temp.getDay() == 6) {
+    
+    let item2 = document.createElement("div");
+    item2.classList.add("row0");
+    item2.innerText = i + 1;
+    
+	if (dt_temp.getDay() == 0 || dt_temp.getDay() == 6) {
       item.classList.add("holiday");
     }
     if (dateString == today_temp) {
       item.classList.add("month_in_today");
-      item.innerHTML += "<span>&nbsp오늘 ♬</span>";
+      item2.innerHTML += "<span>&nbsp오늘 ♬</span>";
     }
-
+	item.appendChild(item2);
     calendar_body.appendChild(item);
   }
 
@@ -436,7 +462,12 @@ function view_like_month(week, month, year, month_str) {
     item.classList.add("afterMonth_daybox");
     item.classList.add("daybox");
     item.id = dateString;
-    item.innerText = i + 1;
+    
+    let item2 = document.createElement("div");
+    item2.classList.add("row0");
+    item2.innerText = i + 1;
+    item.appendChild(item2);
+    
     calendar_body.appendChild(item);
   }
 

@@ -11,7 +11,7 @@ import com.company.dto.Schedule_dto;
 
 public class Schedule_dao {
 
-	public ArrayList<Schedule_dto>  user_read(Schedule_dto dto_input) {
+	public ArrayList<Schedule_dto>  all_schedule_read(Schedule_dto dto_input) {
 		ArrayList<Schedule_dto> list = null;
 		
 		DBManager db = new DBManager();
@@ -26,9 +26,10 @@ public class Schedule_dao {
 			pstmt.setInt(1, dto_input.getU_index());
 			
 			rset = pstmt.executeQuery();
-
+			list = new ArrayList<Schedule_dto>();
+			
 			while (rset.next()) {
-				list = new ArrayList<Schedule_dto>();
+				
 				
 				list.add(new Schedule_dto(
 						rset.getInt("S_index"),
