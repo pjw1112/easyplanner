@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'spaceGrotesk';
+    src: url('SpaceGrotesk-Bold.ttf') format('ttf');
+    /* 추가로 다른 포맷에 대한 지원도 포함할 수 있습니다. */
+}
+
+.blue{
+    color:blue;
+    font-family :'spaceGrotesk';
+    font-weight: bold;
+    
+}
+.white{
+    color:rgb(133, 132, 132);
+    font-family :'spaceGrotesk';
+    font-weight: bold;
+}
+.gray{
+    color:rgb(133, 132, 132);
+    font-family :'spaceGrotesk';
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 28px;
+}
