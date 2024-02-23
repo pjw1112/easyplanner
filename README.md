@@ -9,7 +9,7 @@
 
 ## 특징
 
-- [o] 웹 - 모바일 반응형 디자인
+- [x] 웹 - 모바일 반응형 디자인
 - [x] 캘린더 구현 - 자바스크립트 Date() 함수
 - [x] 일정 관리 view - 이벤트 버블링 / 이벤트 캡쳐링 / event.stopPropagation 사용
 - [x] 하단 프롬프트에서 대화형으로 일정 조작 가능 - Google Gemini AI API
