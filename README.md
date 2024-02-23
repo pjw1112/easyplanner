@@ -7,7 +7,7 @@
 
 ![Group 106](https://github.com/pjw1112/easyplanner/assets/18456659/4aa4612c-f626-4b33-9d63-45101b4163ab)
 
-
+<br/><br/><br/>
 ## 특징
 
 - [x] 웹 - 모바일 반응형 디자인
@@ -24,12 +24,12 @@
 <img src="https://github.com/pjw1112/easyplanner/assets/18456659/184537eb-e4ca-4185-a729-3a48aa17b6de.png" width="400" />
 
 
-
+<br/><br/><br/>
 ## CURD
 
 ![curd](https://github.com/pjw1112/easyplanner/assets/18456659/b461baec-c65d-48e0-8fbc-89f089db9e9e)
 
-
+<br/><br/><br/>
 ## ERD
 
 ![erd](https://github.com/pjw1112/easyplanner/assets/18456659/5116e4b2-36b7-4092-9729-74b5b8ab0225)
