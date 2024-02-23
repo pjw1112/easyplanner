@@ -13,20 +13,9 @@
 - [x] 캘린더 구현 - 자바스크립트 Date() 함수
 - [x] 일정 관리 view - 이벤트 버블링 / 이벤트 캡쳐링 / event.stopPropagation 사용
 - [x] MVC2 디자인
-- [x] Custom date view/composable - Make your day cells look however you want, with any
-  functionality you want.
-- [x] Custom calendar view/composable - Make your calendar look however you want, with whatever
-  functionality you want.
-- [x] Custom first day of the week - Use any day as the first day of the week.
-- [x] Horizontal or vertical scrolling calendar.
-- [x] HeatMap calendar - Suitable for showing how data changes over time, like GitHub's contribution
-  chart.
-- [x] Month/Week headers and footers - Add headers/footers of any kind on each month/week.
-- [x] Easily scroll to any date/week/month on the calendar via swipe actions or programmatically.
-- [x] Use all RecyclerView/LazyRow/LazyColumn customizations since the calendar extends from
-  RecyclerView for the view system and uses LazyRow/LazyColumn for compose.
-- [x] Design your calendar [however you want.](https://github.com/kizitonwose/Calendar/issues/1) The
-  library provides the logic, you provide the views/composables.
+- [x] 하단 프롬프트에서 대화형으로 일정 조작 가능 - Google Gemini AI API
+
+
 
 ## Sample project
 
