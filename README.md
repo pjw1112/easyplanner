@@ -7,6 +7,7 @@
 
 ![Group 106](https://github.com/pjw1112/easyplanner/assets/18456659/4aa4612c-f626-4b33-9d63-45101b4163ab)
 
+
 ## 특징
 
 - [x] 웹 - 모바일 반응형 디자인
@@ -16,21 +17,20 @@
 - [x] MVC2 디자인
 
 
+## 페이지 구조 ( Information Architecture )
 
-## Sample project
+![IA구조](https://github.com/pjw1112/easyplanner/assets/18456659/184537eb-e4ca-4185-a729-3a48aa17b6de)
 
-It's important to check out the sample app. There are lots of examples provided for both view and compose implementations. 
-Most techniques that you would want to implement are already done in the examples.
 
-Download the sample app [here](https://github.com/kizitonwose/Calendar/releases/download/2.0.0/sample.apk)
+## CURD
 
-View the sample app's source code [here](https://github.com/kizitonwose/Calendar/tree/main/sample)
+![curd](https://github.com/pjw1112/easyplanner/assets/18456659/b461baec-c65d-48e0-8fbc-89f089db9e9e)
 
-## Setup
 
-The library uses `java.time` classes via [Java 8+ API desugaring](https://developer.android.com/studio/write/java8-support#library-desugaring) for backward compatibility since these classes were added in Java 8.
+## ERD
 
-#### Step 1
+![erd](https://github.com/pjw1112/easyplanner/assets/18456659/5116e4b2-36b7-4092-9729-74b5b8ab0225)
+
 
 This step is required ONLY if your app's `minSdkVersion` is below 26. Jump to [step 2](#step-2) if this does not apply to you.
 
