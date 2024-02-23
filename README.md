@@ -5,7 +5,7 @@
 
 **서비스 호스팅 페이지 : https://parkjinwoo.com/easy_planner**
 
-![Preview](https://github.com/pjw1112/easyplanner/tree/main/src/images/mobile6)
+![Group 106](https://github.com/pjw1112/easyplanner/assets/18456659/4aa4612c-f626-4b33-9d63-45101b4163ab)
 
 ## 특징
 
