@@ -19,21 +19,19 @@
 
 <br/><br/><br/>
 ## 페이지 구조 ( Information Architecture )
-<br/>
 
 <img src="https://github.com/pjw1112/easyplanner/assets/18456659/184537eb-e4ca-4185-a729-3a48aa17b6de.png" width="400" />
-
-
 <br/><br/><br/>
+
 ## CURD
-<br/>
-![curd](https://github.com/pjw1112/easyplanner/assets/18456659/b461baec-c65d-48e0-8fbc-89f089db9e9e)
 
-
+<img src="https://github.com/pjw1112/easyplanner/assets/18456659/b461baec-c65d-48e0-8fbc-89f089db9e9e.png" width="400" />
 <br/><br/><br/>
+
 ## ERD
-<br/>
-![erd](https://github.com/pjw1112/easyplanner/assets/18456659/5116e4b2-36b7-4092-9729-74b5b8ab0225)
+
+<img src="https://github.com/pjw1112/easyplanner/assets/18456659/5116e4b2-36b7-4092-9729-74b5b8ab0225.png" width="400" />
+<br/><br/><br/>
 
 
 This step is required ONLY if your app's `minSdkVersion` is below 26. Jump to [step 2](#step-2) if this does not apply to you.
