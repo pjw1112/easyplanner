@@ -2,14 +2,14 @@
 
 강남IT학원 자바 풀스택 과정 박진우 개인 프로젝트 - 일정 관리 서비스
 
-
+<br/><br/><br/>
 **서비스 호스팅 페이지 : https://parkjinwoo.com/easy_planner**
-
+<br/>
 ![Group 106](https://github.com/pjw1112/easyplanner/assets/18456659/4aa4612c-f626-4b33-9d63-45101b4163ab)
 
 <br/><br/><br/>
 ## 특징
-
+<br/>
 - [x] 웹 - 모바일 반응형 디자인
 - [x] 캘린더 구현 - 자바스크립트 Date() 함수
 - [x] 일정 관리 view - 이벤트 버블링 / 이벤트 캡쳐링 / event.stopPropagation 사용
@@ -19,19 +19,20 @@
 
 <br/><br/><br/>
 ## 페이지 구조 ( Information Architecture )
-
+<br/>
 
 <img src="https://github.com/pjw1112/easyplanner/assets/18456659/184537eb-e4ca-4185-a729-3a48aa17b6de.png" width="400" />
 
 
 <br/><br/><br/>
 ## CURD
-
+<br/>
 ![curd](https://github.com/pjw1112/easyplanner/assets/18456659/b461baec-c65d-48e0-8fbc-89f089db9e9e)
+
 
 <br/><br/><br/>
 ## ERD
-
+<br/>
 ![erd](https://github.com/pjw1112/easyplanner/assets/18456659/5116e4b2-36b7-4092-9729-74b5b8ab0225)
 
 
