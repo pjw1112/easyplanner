@@ -19,7 +19,8 @@
 
 ## 페이지 구조 ( Information Architecture )
 
-![IA구조](https://github.com/pjw1112/easyplanner/assets/18456659/184537eb-e4ca-4185-a729-3a48aa17b6de)
+<img src="https://github.com/pjw1112/easyplanner/assets/18456659/184537eb-e4ca-4185-a729-3a48aa17b6de.png" width="200" />
+
 
 
 ## CURD
