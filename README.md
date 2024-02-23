@@ -25,12 +25,12 @@
 
 ## CURD
 
-<img src="https://github.com/pjw1112/easyplanner/assets/18456659/b461baec-c65d-48e0-8fbc-89f089db9e9e.png" width="400" />
+<img src="https://github.com/pjw1112/easyplanner/assets/18456659/b461baec-c65d-48e0-8fbc-89f089db9e9e.png" width="600" />
 <br/><br/><br/>
 
 ## ERD
 
-<img src="https://github.com/pjw1112/easyplanner/assets/18456659/5116e4b2-36b7-4092-9729-74b5b8ab0225.png" width="400" />
+<img src="https://github.com/pjw1112/easyplanner/assets/18456659/5116e4b2-36b7-4092-9729-74b5b8ab0225.png" width="600" />
 <br/><br/><br/>
 
 
