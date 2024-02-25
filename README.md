@@ -33,11 +33,12 @@
 <img src="https://github.com/pjw1112/easyplanner/assets/18456659/5116e4b2-36b7-4092-9729-74b5b8ab0225.png" width="600" />
 <br/><br/><br/>
 
-## GIF
+## 대화형 입력으로 일정 추가/ 수정/ 삭제
 
-<img src="https://github.com/pjw1112/easyplanner/assets/18456659/a3d46a8d-fae8-4958-b1be-ef6ddd482eec" width="250" />
-<img src="https://github.com/pjw1112/easyplanner/assets/18456659/d88f60f4-c615-4331-aa5d-e50168515fad" width="250" />
 <img src="https://github.com/pjw1112/easyplanner/assets/18456659/517101b0-09be-441a-a5dd-73fd40110242" width="250" />
+<img src="https://github.com/pjw1112/easyplanner/assets/18456659/d88f60f4-c615-4331-aa5d-e50168515fad" width="250" />
+<img src="https://github.com/pjw1112/easyplanner/assets/18456659/a3d46a8d-fae8-4958-b1be-ef6ddd482eec" width="250" />
+<br/><br/><br/>
 
 
 
