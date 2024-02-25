@@ -56,11 +56,12 @@
 
 ## 간략 설명
 
-이지 플래너는 쉽고 예쁜 캘린더 서비스를 구현해보면 어떨까 하는 생각으로 만들게 되었습니다.
-백엔드 자바 코드는 이클립스의 다이나믹 웹 프로젝트로 만들었고 
-프론트 엔드는 VSCODE로 만들었습니다. HTML + CSS + JAVASCRIPT
-서버 환경 : CAFE24 / Tomcat 8.5.x / JSP 2.3 / Servlet 3.0 / JDK 8 / MariaDB 10.1.x UTF-8
+이지 플래너는 쉽고 예쁜 캘린더 서비스를 구현해보면 어떨까 하는 생각으로 만들게 되었습니다.<br/>
+백엔드 자바 코드는 이클립스의 다이나믹 웹 프로젝트로 만들었고 <br/>
+프론트 엔드는 VSCODE로 만들었습니다. HTML + CSS + JAVASCRIPT<br/>
+서버 환경 : CAFE24 / Tomcat 8.5.x / JSP 2.3 / Servlet 3.0 / JDK 8 / MariaDB 10.1.x UTF-8<br/>
 
+<br/><br/><br/>
 <br/><br/><br/>
 
 email : bananasyndro@naver.com
