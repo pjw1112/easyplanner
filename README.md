@@ -41,6 +41,16 @@
 <br/><br/><br/>
 
 
+![GOMCAM 20240223_0019040403 (3)](https://github.com/pjw1112/easyplanner/assets/18456659/d2b18b8e-f591-4e45-9aee-2a83028b945a)
+![GOMCAM 20240223_0019040403 (2)](https://github.com/pjw1112/easyplanner/assets/18456659/9cbb7b4e-3935-4fc3-beeb-a1a184e24769)
+![GOMCAM 20240223_0019040403 (1)](https://github.com/pjw1112/easyplanner/assets/18456659/70ea1484-8c4b-49f2-b7a1-99e58814a6c4)
+![GOMCAM 20240223_0019040403](https://github.com/pjw1112/easyplanner/assets/18456659/afa793db-101e-4168-b5dd-9ae028b08e26)
+![GOMCAM 20240223_2335210295 (5)](https://github.com/pjw1112/easyplanner/assets/18456659/1f971088-a37f-480f-84f8-9372298d161d)
+![GOMCAM 20240223_2335210295 (4)](https://github.com/pjw1112/easyplanner/assets/18456659/8a676fff-9bdf-4952-8acb-e835d640425a)
+![GOMCAM 20240223_2335210295 (3)](https://github.com/pjw1112/easyplanner/assets/18456659/9c7a870e-d27f-42f0-b7fb-e27e4e43b074)
+![GOMCAM 20240223_2335210295 (2)](https://github.com/pjw1112/easyplanner/assets/18456659/21b9f6bb-7e48-4aa0-a08a-c35f8f6cacc7)
+![GOMCAM 20240223_2335210295 (1)](https://github.com/pjw1112/easyplanner/assets/18456659/d7b54df3-1134-41e0-a719-987ee0d9fc8c)
+![GOMCAM 20240223_2335210295](https://github.com/pjw1112/easyplanner/assets/18456659/6fac7c9b-df02-4fcf-84ac-fcbe93f68668)
 
 This step is required ONLY if your app's `minSdkVersion` is below 26. Jump to [step 2](#step-2) if this does not apply to you.
 
