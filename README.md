@@ -49,9 +49,9 @@
 
 ## 반응형 디자인
 
-<img src="https://github.com/pjw1112/easyplanner/assets/18456659/6fac7c9b-df02-4fcf-84ac-fcbe93f68668" width="750" />
-<img src="https://github.com/pjw1112/easyplanner/assets/18456659/d7b54df3-1134-41e0-a719-987ee0d9fc8c" width="750" />
-<img src="https://github.com/pjw1112/easyplanner/assets/18456659/21b9f6bb-7e48-4aa0-a08a-c35f8f6cacc7" width="750" />
+<img src="https://github.com/pjw1112/easyplanner/assets/18456659/6fac7c9b-df02-4fcf-84ac-fcbe93f68668" width="250" />
+<img src="https://github.com/pjw1112/easyplanner/assets/18456659/d7b54df3-1134-41e0-a719-987ee0d9fc8c" width="250" />
+<img src="https://github.com/pjw1112/easyplanner/assets/18456659/21b9f6bb-7e48-4aa0-a08a-c35f8f6cacc7" width="250" />
 <br/><br/><br/>
 
 
