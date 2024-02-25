@@ -33,6 +33,12 @@
 <img src="https://github.com/pjw1112/easyplanner/assets/18456659/5116e4b2-36b7-4092-9729-74b5b8ab0225.png" width="600" />
 <br/><br/><br/>
 
+## GIF
+
+![GOMCAM 20240223_0019040403 (6)](https://github.com/pjw1112/easyplanner/assets/18456659/a3d46a8d-fae8-4958-b1be-ef6ddd482eec)
+![GOMCAM 20240223_0019040403 (5)](https://github.com/pjw1112/easyplanner/assets/18456659/d88f60f4-c615-4331-aa5d-e50168515fad)
+![GOMCAM 20240223_0019040403 (4)](https://github.com/pjw1112/easyplanner/assets/18456659/517101b0-09be-441a-a5dd-73fd40110242)
+
 
 This step is required ONLY if your app's `minSdkVersion` is below 26. Jump to [step 2](#step-2) if this does not apply to you.
 
